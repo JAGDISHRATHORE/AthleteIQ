@@ -1,0 +1,18 @@
+# core
+numpy>=1.26
+pandas>=2.2
+pyarrow>=15
+pyyaml>=6.0
+duckdb>=1.0
+scikit-learn>=1.4
+lightgbm>=4.3
+shap>=0.45
+joblib>=1.3
+# app + figures
+streamlit>=1.48
+plotly>=5.20
+matplotlib>=3.8
+# data download
+huggingface_hub>=0.23
+# optional: Claude backend for Ask AthleteIQ (set ANTHROPIC_API_KEY)
+anthropic>=0.40
