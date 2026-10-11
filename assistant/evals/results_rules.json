@@ -1,0 +1,19 @@
+{
+  "backend": "rules",
+  "n_questions": 244,
+  "intent_accuracy": 1.0,
+  "intent_accuracy_by_type": {
+    "athlete_overview": 1.0,
+    "explain_prediction": 1.0,
+    "find_anomalies": 1.0,
+    "refuse": 1.0,
+    "session_detail": 1.0,
+    "unsupported": 1.0,
+    "workload_trend": 1.0
+  },
+  "numeric_recall": 1.0,
+  "unsupported_number_rate": 0.0,
+  "refusal_precision": 1.0,
+  "refusal_recall": 1.0,
+  "citation_coverage": 1.0
+}
