@@ -1,0 +1,51 @@
+# AthleteIQ configuration. Every number the pipeline uses lives here so it is
+# documented in one place and can be changed without touching code.
+
+data:
+  hf_dataset: rricc22/endomondo-hr-prediction-v2
+  raw_file: data/raw/endomondo_hr_v2.parquet
+  processed_dir: data/processed
+  sample_dir: data/sample
+
+quality:
+  hr_min_valid: 40          # bpm; below this a running HR sample is treated as a sensor error
+  hr_max_valid: 220         # bpm
+  hr_spike_bpm: 20          # |delta HR| between consecutive samples counted as a spike
+  speed_max_valid_kmh: 30   # faster than this while "running" is treated as a GPS error
+  speed_jump_kmh: 10        # |delta speed| between consecutive samples counted as a GPS jump
+  gap_s: 60                 # a gap longer than this between samples is a recording gap
+  flatline_s: 120           # identical HR for this long suggests a frozen sensor
+
+athlete:
+  hrmax_default: 190        # used until an athlete has enough sessions of their own
+  hrmax_min_sessions: 5     # sessions before the personal HRmax estimate is trusted
+  baseline_window_days: 28
+  baseline_min_sessions: 3
+  # Minimum spread used for z-scores, so a few near-identical sessions cannot
+  # turn a normal day into a "10 sigma" anomaly.
+  z_std_floor:
+    hr_mean: 3.0
+    avg_speed_kmh: 0.5
+    efficiency_m_per_beat: 0.04
+    trimp: 25.0
+    distance_km: 1.5
+  anomaly_z: 2.0
+
+load:
+  acute_days: 7
+  chronic_days: 28
+
+model:
+  min_sessions_per_athlete: 10
+  train_frac: 0.70
+  val_frac: 0.15            # test = the remaining (most recent) 15% of each athlete's sessions
+  holdout_athlete_frac: 0.15     # brand-new athletes, used only for final evaluation
+  calib_athlete_frac: 0.10       # other new athletes, used only to calibrate intervals
+  random_state: 42
+  conformal_alpha: 0.10     # 90% prediction intervals
+  conformal_groups: [0, 5, 20]   # Mondrian groups by number of prior sessions: 0-4, 5-19, 20+
+  shrinkage_grid: [1, 2, 5, 10, 20, 50]
+
+assistant:
+  llm_model: claude-sonnet-5-5   # used only when ANTHROPIC_API_KEY is set
+  max_tool_rounds: 5
