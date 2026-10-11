@@ -1,0 +1,574 @@
+{
+  "target": "session mean heart rate (bpm)",
+  "n_features": 22,
+  "best_shrinkage_k": 10,
+  "val_mae_by_k": {
+    "1": 4.746167638066425,
+    "2": 4.678750662119282,
+    "5": 4.623352369817232,
+    "10": 4.611476334678364,
+    "20": 4.62062843474887,
+    "50": 4.641281569359142
+  },
+  "lgbm_best_iteration": 429,
+  "conformal": {
+    "alpha": 0.1,
+    "plain_half_width_bpm": 9.791786023201695,
+    "mondrian_half_width_bpm": {
+      "0-4": 13.225336817938015,
+      "5-19": 10.426441580922528,
+      "20+": 9.645869154694878
+    }
+  },
+  "splits": {
+    "train": 22102,
+    "holdout": 4865,
+    "val": 4563,
+    "test": 4333,
+    "calib": 4323
+  },
+  "by_split": {
+    "val": {
+      "global_mean": {
+        "n": 4563,
+        "mae": 9.859412198691675,
+        "rmse": 12.23462674155484,
+        "r2": -0.011502498547202533,
+        "within_5bpm": 0.31711593250054787
+      },
+      "athlete_last5": {
+        "n": 4563,
+        "mae": 6.820387024190978,
+        "rmse": 9.149759823227834,
+        "r2": 0.4342756140510998,
+        "within_5bpm": 0.4873986412447951
+      },
+      "personal_speed_fit": {
+        "n": 4563,
+        "mae": 5.41050584209982,
+        "rmse": 7.272520010909535,
+        "r2": 0.6425993309584332,
+        "within_5bpm": 0.5704580319964936
+      },
+      "ridge": {
+        "n": 4563,
+        "mae": 4.931493324123606,
+        "rmse": 6.771110199076466,
+        "r2": 0.6901829779359698,
+        "within_5bpm": 0.6166995397764629
+      },
+      "lgbm": {
+        "n": 4563,
+        "mae": 4.679007683176776,
+        "rmse": 6.289565983939838,
+        "r2": 0.7326828226579476,
+        "within_5bpm": 0.6368617137847907
+      },
+      "lgbm_personal": {
+        "n": 4563,
+        "mae": 4.611476334678364,
+        "rmse": 6.225919369619939,
+        "r2": 0.738065626007163,
+        "within_5bpm": 0.6469428007889546
+      },
+      "interval_coverage": 0.8976550515012054,
+      "interval_coverage_plain": 0.9002849002849003
+    },
+    "test": {
+      "global_mean": {
+        "n": 4333,
+        "mae": 10.371250541912048,
+        "rmse": 12.8486763107626,
+        "r2": -0.010793430268569715,
+        "within_5bpm": 0.308562197092084
+      },
+      "athlete_last5": {
+        "n": 4333,
+        "mae": 7.208234846261564,
+        "rmse": 9.669566430708626,
+        "r2": 0.4275208993154074,
+        "within_5bpm": 0.4643434110316178
+      },
+      "personal_speed_fit": {
+        "n": 4333,
+        "mae": 5.768913395671531,
+        "rmse": 7.555081381768955,
+        "r2": 0.6505187120667706,
+        "within_5bpm": 0.5358873759519963
+      },
+      "ridge": {
+        "n": 4333,
+        "mae": 5.052440891544736,
+        "rmse": 6.7489018975033,
+        "r2": 0.7211235352324414,
+        "within_5bpm": 0.603969536118163
+      },
+      "lgbm": {
+        "n": 4333,
+        "mae": 4.852821283460802,
+        "rmse": 6.4824139593544166,
+        "r2": 0.7427122221180891,
+        "within_5bpm": 0.6145857373644127
+      },
+      "lgbm_personal": {
+        "n": 4333,
+        "mae": 4.751215900299661,
+        "rmse": 6.321812711915215,
+        "r2": 0.755302864885223,
+        "within_5bpm": 0.6332794830371568
+      },
+      "interval_coverage": 0.8919916916685899,
+      "interval_coverage_plain": 0.8954534964228018
+    },
+    "holdout": {
+      "global_mean": {
+        "n": 4865,
+        "mae": 9.310286786718743,
+        "rmse": 11.8738506318874,
+        "r2": -0.016945312396441592,
+        "within_5bpm": 0.36258992805755397
+      },
+      "athlete_last5": {
+        "n": 4865,
+        "mae": 7.531441348296742,
+        "rmse": 9.94301196678148,
+        "r2": 0.28690012514949614,
+        "within_5bpm": 0.4468653648509764
+      },
+      "personal_speed_fit": {
+        "n": 4865,
+        "mae": 6.13069125080599,
+        "rmse": 8.169261598853875,
+        "r2": 0.5186288669912208,
+        "within_5bpm": 0.513874614594039
+      },
+      "ridge": {
+        "n": 4865,
+        "mae": 5.435908788324111,
+        "rmse": 7.319285328382286,
+        "r2": 0.6135869444561612,
+        "within_5bpm": 0.5741007194244604
+      },
+      "lgbm": {
+        "n": 4865,
+        "mae": 5.232828667791266,
+        "rmse": 6.974698481483722,
+        "r2": 0.6491145892424155,
+        "within_5bpm": 0.5864337101747173
+      },
+      "lgbm_personal": {
+        "n": 4865,
+        "mae": 5.231034734966489,
+        "rmse": 6.965553250356069,
+        "r2": 0.6500341485364574,
+        "within_5bpm": 0.5897225077081192
+      },
+      "interval_coverage": 0.8725590955806783,
+      "interval_coverage_plain": 0.8614594039054471
+    }
+  },
+  "error_analysis": {
+    "test": {
+      "label_workout_type": [
+        {
+          "label_workout_type": "INTENSIVE",
+          "n": 223,
+          "mae": 7.981,
+          "coverage": 0.682,
+          "coverage_plain": 0.691
+        },
+        {
+          "label_workout_type": "RECOVERY",
+          "n": 1824,
+          "mae": 4.789,
+          "coverage": 0.897,
+          "coverage_plain": 0.901
+        },
+        {
+          "label_workout_type": "STEADY",
+          "n": 2286,
+          "mae": 4.406,
+          "coverage": 0.908,
+          "coverage_plain": 0.911
+        }
+      ],
+      "history_bucket": [
+        {
+          "history_bucket": "5-19",
+          "n": 189,
+          "mae": 5.765,
+          "coverage": 0.836,
+          "coverage_plain": 0.825
+        },
+        {
+          "history_bucket": "20-49",
+          "n": 608,
+          "mae": 5.279,
+          "coverage": 0.867,
+          "coverage_plain": 0.872
+        },
+        {
+          "history_bucket": "50+",
+          "n": 3536,
+          "mae": 4.606,
+          "coverage": 0.899,
+          "coverage_plain": 0.903
+        }
+      ],
+      "duration_bucket": [
+        {
+          "duration_bucket": "<30",
+          "n": 306,
+          "mae": 5.418,
+          "coverage": 0.866,
+          "coverage_plain": 0.869
+        },
+        {
+          "duration_bucket": "30-60",
+          "n": 1830,
+          "mae": 4.864,
+          "coverage": 0.887,
+          "coverage_plain": 0.89
+        },
+        {
+          "duration_bucket": "60-90",
+          "n": 1388,
+          "mae": 4.597,
+          "coverage": 0.904,
+          "coverage_plain": 0.91
+        },
+        {
+          "duration_bucket": "90+",
+          "n": 809,
+          "mae": 4.509,
+          "coverage": 0.892,
+          "coverage_plain": 0.894
+        }
+      ],
+      "quality_label": [
+        {
+          "quality_label": "check",
+          "n": 207,
+          "mae": 5.181,
+          "coverage": 0.836,
+          "coverage_plain": 0.836
+        },
+        {
+          "quality_label": "good",
+          "n": 4117,
+          "mae": 4.726,
+          "coverage": 0.895,
+          "coverage_plain": 0.899
+        },
+        {
+          "quality_label": "poor",
+          "n": 9,
+          "mae": 6.302,
+          "coverage": 0.778,
+          "coverage_plain": 0.778
+        }
+      ]
+    },
+    "holdout": {
+      "label_workout_type": [
+        {
+          "label_workout_type": "INTENSIVE",
+          "n": 323,
+          "mae": 8.657,
+          "coverage": 0.644,
+          "coverage_plain": 0.604
+        },
+        {
+          "label_workout_type": "RECOVERY",
+          "n": 1478,
+          "mae": 5.696,
+          "coverage": 0.853,
+          "coverage_plain": 0.842
+        },
+        {
+          "label_workout_type": "STEADY",
+          "n": 3064,
+          "mae": 4.646,
+          "coverage": 0.906,
+          "coverage_plain": 0.898
+        }
+      ],
+      "history_bucket": [
+        {
+          "history_bucket": "0-4",
+          "n": 425,
+          "mae": 6.564,
+          "coverage": 0.887,
+          "coverage_plain": 0.774
+        },
+        {
+          "history_bucket": "5-19",
+          "n": 1130,
+          "mae": 5.38,
+          "coverage": 0.878,
+          "coverage_plain": 0.86
+        },
+        {
+          "history_bucket": "20-49",
+          "n": 1337,
+          "mae": 5.078,
+          "coverage": 0.861,
+          "coverage_plain": 0.868
+        },
+        {
+          "history_bucket": "50+",
+          "n": 1973,
+          "mae": 4.963,
+          "coverage": 0.874,
+          "coverage_plain": 0.877
+        }
+      ],
+      "duration_bucket": [
+        {
+          "duration_bucket": "<30",
+          "n": 326,
+          "mae": 5.4,
+          "coverage": 0.859,
+          "coverage_plain": 0.85
+        },
+        {
+          "duration_bucket": "30-60",
+          "n": 2002,
+          "mae": 5.411,
+          "coverage": 0.867,
+          "coverage_plain": 0.855
+        },
+        {
+          "duration_bucket": "60-90",
+          "n": 1647,
+          "mae": 4.783,
+          "coverage": 0.894,
+          "coverage_plain": 0.885
+        },
+        {
+          "duration_bucket": "90+",
+          "n": 890,
+          "mae": 5.593,
+          "coverage": 0.851,
+          "coverage_plain": 0.837
+        }
+      ],
+      "quality_label": [
+        {
+          "quality_label": "check",
+          "n": 206,
+          "mae": 4.663,
+          "coverage": 0.913,
+          "coverage_plain": 0.903
+        },
+        {
+          "quality_label": "good",
+          "n": 4649,
+          "mae": 5.259,
+          "coverage": 0.871,
+          "coverage_plain": 0.859
+        },
+        {
+          "quality_label": "poor",
+          "n": 10,
+          "mae": 4.089,
+          "coverage": 1.0,
+          "coverage_plain": 1.0
+        }
+      ]
+    }
+  },
+  "holdout_learning_curve": [
+    {
+      "n": 0,
+      "global": 6.529,
+      "personal": 6.564,
+      "sessions": 425.0
+    },
+    {
+      "n": 5,
+      "global": 5.465,
+      "personal": 5.466,
+      "sessions": 425.0
+    },
+    {
+      "n": 10,
+      "global": 5.487,
+      "personal": 5.645,
+      "sessions": 372.0
+    },
+    {
+      "n": 15,
+      "global": 4.991,
+      "personal": 4.973,
+      "sessions": 333.0
+    },
+    {
+      "n": 20,
+      "global": 5.051,
+      "personal": 4.939,
+      "sessions": 295.0
+    },
+    {
+      "n": 25,
+      "global": 5.143,
+      "personal": 5.189,
+      "sessions": 248.0
+    },
+    {
+      "n": 30,
+      "global": 4.763,
+      "personal": 4.714,
+      "sessions": 224.0
+    },
+    {
+      "n": 35,
+      "global": 5.279,
+      "personal": 5.32,
+      "sessions": 210.0
+    },
+    {
+      "n": 40,
+      "global": 5.59,
+      "personal": 5.437,
+      "sessions": 188.0
+    },
+    {
+      "n": 45,
+      "global": 5.043,
+      "personal": 4.939,
+      "sessions": 172.0
+    },
+    {
+      "n": 50,
+      "global": 4.809,
+      "personal": 4.767,
+      "sessions": 170.0
+    },
+    {
+      "n": 55,
+      "global": 4.859,
+      "personal": 4.903,
+      "sessions": 163.0
+    },
+    {
+      "n": 60,
+      "global": 4.993,
+      "personal": 4.989,
+      "sessions": 1640.0
+    }
+  ],
+  "shap_base_bpm": 149.4084453290451,
+  "global_importance": [
+    {
+      "feature": "prior_hr_at_speed",
+      "label": "Personal HR expected at this speed",
+      "mean_abs_shap_bpm": 4.899
+    },
+    {
+      "feature": "avg_speed_kmh",
+      "label": "Avg speed (km/h)",
+      "mean_abs_shap_bpm": 2.425
+    },
+    {
+      "feature": "hr_mean_last5",
+      "label": "Avg HR, last 5 sessions",
+      "mean_abs_shap_bpm": 1.895
+    },
+    {
+      "feature": "efficiency_m_per_beat_last5",
+      "label": "Efficiency, last 5 sessions",
+      "mean_abs_shap_bpm": 1.766
+    },
+    {
+      "feature": "avg_speed_kmh_last5",
+      "label": "Avg speed, last 5 sessions",
+      "mean_abs_shap_bpm": 0.69
+    },
+    {
+      "feature": "dayofweek",
+      "label": "Day of week",
+      "mean_abs_shap_bpm": 0.574
+    },
+    {
+      "feature": "distance_km",
+      "label": "Distance (km)",
+      "mean_abs_shap_bpm": 0.556
+    },
+    {
+      "feature": "speed_std_kmh",
+      "label": "Speed variability",
+      "mean_abs_shap_bpm": 0.468
+    },
+    {
+      "feature": "hour",
+      "label": "Hour of day",
+      "mean_abs_shap_bpm": 0.398
+    },
+    {
+      "feature": "elev_gain_m",
+      "label": "Elevation gain (m)",
+      "mean_abs_shap_bpm": 0.382
+    },
+    {
+      "feature": "hr_mean_base28",
+      "label": "Avg HR, 28-day baseline",
+      "mean_abs_shap_bpm": 0.324
+    },
+    {
+      "feature": "trimp_last5",
+      "label": "Load (TRIMP), last 5 sessions",
+      "mean_abs_shap_bpm": 0.309
+    },
+    {
+      "feature": "speed_max_kmh",
+      "label": "Max speed (km/h)",
+      "mean_abs_shap_bpm": 0.263
+    },
+    {
+      "feature": "days_since_last",
+      "label": "Days since last session",
+      "mean_abs_shap_bpm": 0.211
+    },
+    {
+      "feature": "prior_hr_speed_slope",
+      "label": "Personal HR-per-km/h slope",
+      "mean_abs_shap_bpm": 0.186
+    },
+    {
+      "feature": "duration_min",
+      "label": "Duration (min)",
+      "mean_abs_shap_bpm": 0.156
+    },
+    {
+      "feature": "log_prior_sessions",
+      "label": "History length (log sessions)",
+      "mean_abs_shap_bpm": 0.151
+    },
+    {
+      "feature": "prior_chronic",
+      "label": "Chronic load (28 d)",
+      "mean_abs_shap_bpm": 0.144
+    },
+    {
+      "feature": "prior_ewma_acwr",
+      "label": "EWMA acute:chronic ratio",
+      "mean_abs_shap_bpm": 0.116
+    },
+    {
+      "feature": "elev_loss_m",
+      "label": "Elevation loss (m)",
+      "mean_abs_shap_bpm": 0.11
+    },
+    {
+      "feature": "prior_acute",
+      "label": "Acute load (7 d)",
+      "mean_abs_shap_bpm": 0.102
+    },
+    {
+      "feature": "prior_acwr",
+      "label": "Acute:chronic ratio",
+      "mean_abs_shap_bpm": 0.081
+    }
+  ]
+}
