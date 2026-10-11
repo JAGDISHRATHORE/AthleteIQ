@@ -1,0 +1,17 @@
+# data: raw + full processed tables are rebuilt by the pipeline (see README)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+# env / os
+.env
+.DS_Store
