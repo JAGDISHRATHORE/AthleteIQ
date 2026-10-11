@@ -1,7 +1,7 @@
 # AthleteIQ
 
-**Sports-performance intelligence from real wearable data: personal baselines, training load, a heart-rate
-model that knows how uncertain it is, and an AI analyst that can only say what the numbers support.**
+Sports-performance intelligence from real wearable data: personal baselines, training load, a heart-rate
+model that knows how uncertain it is, and an AI analyst that can only say what the numbers support 
 
 [![CI](https://github.com/JAGDISHRATHORE/AthleteIQ/actions/workflows/ci.yml/badge.svg)](https://github.com/JAGDISHRATHORE/AthleteIQ/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
