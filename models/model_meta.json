@@ -1,0 +1,35 @@
+{
+  "features": [
+    "duration_min",
+    "distance_km",
+    "avg_speed_kmh",
+    "speed_std_kmh",
+    "speed_max_kmh",
+    "elev_gain_m",
+    "elev_loss_m",
+    "hour",
+    "dayofweek",
+    "hr_mean_last5",
+    "hr_mean_base28",
+    "efficiency_m_per_beat_last5",
+    "avg_speed_kmh_last5",
+    "trimp_last5",
+    "prior_hr_at_speed",
+    "prior_hr_speed_slope",
+    "log_prior_sessions",
+    "days_since_last",
+    "prior_acute",
+    "prior_chronic",
+    "prior_acwr",
+    "prior_ewma_acwr"
+  ],
+  "global_mean": 149.5372410501469,
+  "shrinkage_k": 10,
+  "conformal_q_plain": 9.791786023201695,
+  "conformal_q_by_history": {
+    "0-4": 13.225336817938015,
+    "5-19": 10.426441580922528,
+    "20+": 9.645869154694878
+  },
+  "shap_base": 149.4084453290451
+}
