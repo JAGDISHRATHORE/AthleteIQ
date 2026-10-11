@@ -3,10 +3,6 @@
 Sports-performance intelligence from real wearable data: personal baselines, training load, a heart-rate
 model that knows how uncertain it is, and an AI analyst that can only say what the numbers support 
 
-[![CI](https://github.com/JAGDISHRATHORE/AthleteIQ/actions/workflows/ci.yml/badge.svg)](https://github.com/JAGDISHRATHORE/AthleteIQ/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-
 ![Dashboard: prediction view](assets/screenshots/prediction.png)
 
 Built on **40,186 real running workouts from 761 athletes** (the public FitRec / Endomondo dataset):
